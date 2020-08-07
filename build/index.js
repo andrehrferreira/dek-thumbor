@@ -32,7 +32,9 @@ exports.default = function () {
             console.log("[ Thumbor ] - Please correct the above errors before restarting the application.");
             process.exit(-1);
         } else {
-            _scope.$.set("thumbor", new _thumbor2.default(env.THUMBOR_KEY, env.THUMBOR_URL));
+            _scope.$.set("thumbor", function () {
+                return new _thumbor2.default(env.THUMBOR_KEY, env.THUMBOR_URL);
+            });
         }
     } catch (e) {
         console.log("[ Elasticsearch ] - " + e.message, e);

@@ -1,6 +1,6 @@
 {
     "name": "@dekproject/thumbor",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Thumbor interface plugin for DEK",
     "main": "./build/index.js",
     "scripts": {

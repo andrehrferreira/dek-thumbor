@@ -26,7 +26,9 @@ export default () => {
             process.exit(-1);
         }
         else {
-            $.set("thumbor", new Thumbor(env.THUMBOR_KEY, env.THUMBOR_URL));
+            $.set("thumbor", () => {
+                return new Thumbor(env.THUMBOR_KEY, env.THUMBOR_URL);
+            });
         }
     }
     catch (e) {
